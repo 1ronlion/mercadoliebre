@@ -34,13 +34,26 @@ p{
     font-size: 12px;
 }
 
+.mas-dias{
+    background-color: #39b54a;
+}
 
+.menos-dias{
+    background-color: white;
+}
+
+.pocos-dias{
+    background-color: blue;
+}
 
 /*** HEADER ***/
 
 
 div.top-header{
+    display: flex;
     padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 header{
@@ -48,13 +61,20 @@ header{
 }
 
 header div.logo{
-    width: 150px;
+    min-width: 100px;
     padding: 10px;
+    flex-grow: 0.5;
 }
 
-header div.form{
-    width: 25%;
+header div p{
+    max-width: 50%;
+    flex-grow: 0.5;
 }
+header div.form{
+    display: flex;
+    align-self: center;
+}
+
 header nav{
     font-size: 12px;
 }
@@ -79,12 +99,19 @@ header .form .input{
     outline: none;
     color: #666;
     padding: 2px;
+    overflow: hidden;
+    max-height: 30px;
 }
 header .form .submit{
     background-color: #FFF;
     border: 1px solid #000;
     color: #666;
     width: 10%;
+}
+
+.logo-and-form{
+    display: flex;
+    justify-content: center;
 }
 
 header div.top-header p{
@@ -274,13 +301,23 @@ h3,
 
 
 @media (min-width: 769px) {
-    
+    .top-header{
+        flex-direction: row;
+    }
     .card{
         width: 24%;
     }
 
     header nav.link{
-        display: block ;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    header ul{
+        flex-grow: 0.1;
+        display: flex;
+        justify-content: space-around;
+        
     }
 
     .burguer-menu{
