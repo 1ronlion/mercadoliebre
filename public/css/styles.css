@@ -9,6 +9,8 @@
     --base-font-family: 'Roboto', sans-serif
   }
 
+/*** REGISTRO ***/
+
 
 form.register {
 
@@ -71,6 +73,9 @@ body{
     background-color: #ebebeb !important;
 }
 
+
+/*** HEADER ***/
+
 .last-visit h3{
     font-size: 24px;
     color: var(--gray);
@@ -84,9 +89,6 @@ body{
 p{
     font-size: 12px;
 }
-
-/*** HEADER ***/
-
 
 div.top-header{
     display: flex;
@@ -317,24 +319,58 @@ h3,
 
 
 @media (min-width: 426px){
-    main section article .description{
+
+    .description{
         display: block;
+        visibility: hidden;
     }
 
-    main section article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+    .card:hover .description{
+        visibility: visible;
     }
+
+
 
     .card{
+        
         width: 45%;
+    
     }
 
+
+    main section article i{
+
+        transition: transform 1s;
+
+    }
+
+    .card:hover i{
+
+        transform: rotate(-90deg);
+
+    }
+
+
+    .card:hover {
+
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+    }
+
+    
     .products{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
        }
+
+    .title {
+
+        margin-top: 24px;
+
+    }
 
 }
 
