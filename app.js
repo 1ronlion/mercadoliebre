@@ -3,9 +3,23 @@ const app = express();
 app.use(express.static('public'));
 
 
-app.listen(3001, ()=>{
+
+
+
+const port = process.env.PORT || 3000
+
+
+app.listen(port, ()=>{
     console.log('Servidor funcionando');
 });
+
+
+
+
+
+
+
+
 
 app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/views/home.html');
